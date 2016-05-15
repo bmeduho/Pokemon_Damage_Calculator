@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Shula Damage Calculator</title>
+		<link rel="stylesheet" type="text/css" href="CSS.css"/>
+		<script src="Code/Pokemon.js"></script>
+		<script src="Code/Abilities.js"></script>
+		<script src="Code/Moves.js"></script>
+		<script src="Code/Items.js"></script>
+		<script src="Code/Type.js"></script>
+	</head>
+	<body>
+		<div id="SaveTab" class="tab">Save/Load</div>
+		<div id="PokemonTab" class="tab">Pokemon</div>
+		<div id="BattleTab" class="tab">Battle</div>
+		<div id="SaveScreen" class="screen">
+			<table>
+				<tr>
+					<td>
+						Save One
+						<button id="Save_One_New" onclick="SavingLoading.close('Save_1')">New</button>
+						<button id="Save_One_Save" onclick="SavingLoading.set('Save_1',currentSaveFile)">Save</button>
+						<button id="Save_One_Load" onclick="SavingLoading.get('Save_1')">Load</button>
+						<table id="S1">
+							<tr id="S1T1">
+								<td id="S1T1P1"><a  data-title="" id="S1T1P1A" href="#"><img id="S1T1P1Img"/></a></td>
+								<td id="S1T1P2"><a  data-title="" id="S1T1P2A" href="#"><img id="S1T1P2Img"/></a></td>
+								<td id="S1T1P3"><a  data-title="" id="S1T1P3A" href="#"><img id="S1T1P3Img"/></a></td>
+								<td id="S1T1P4"><a  data-title="" id="S1T1P4A" href="#"><img id="S1T1P4Img"/></a></td>
+								<td id="S1T1P5"><a  data-title="" id="S1T1P5A" href="#"><img id="S1T1P5Img"/></a></td>
+								<td id="S1T1P6"><a  data-title="" id="S1T1P6A" href="#"><img id="S1T1P6Img"/></a></td>
+							</tr>
+							<tr id="S1T2">
+								<td id="S1T2P1"><a  data-title="" id="S1T2P1A" href="#"><img id="S1T2P1Img"/></a></td>
+								<td id="S1T2P2"><a  data-title="" id="S1T2P2A" href="#"><img id="S1T2P2Img"/></a></td>
+								<td id="S1T2P3"><a  data-title="" id="S1T2P3A" href="#"><img id="S1T2P3Img"/></a></td>
+								<td id="S1T2P4"><a  data-title="" id="S1T2P4A" href="#"><img id="S1T2P4Img"/></a></td>
+								<td id="S1T2P5"><a  data-title="" id="S1T2P5A" href="#"><img id="S1T2P5Img"/></a></td>
+								<td id="S1T2P6"><a  data-title="" id="S1T2P6A" href="#"><img id="S1T2P6Img"/></a></td>
+							</tr>
+						</table>
+					</td>
+					<td>
+					Save Two
+						<button id="Save_One_New" onclick="SavingLoading.close('Save_2')">New</button>
+						<button id="Save_One_Save" onclick="SavingLoading.set('Save_2',currentSaveFile)">Save</button>
+						<button id="Save_One_Load" onclick="SavingLoading.get('Save_2')">Load</button>
+						<table id="S2">
+							<tr id="S2T1">
+								<td id="S2T1P1"><a  data-title="" id="S2T1P1A" href="#"><img id="S2T1P1Img"/></a></td>
+								<td id="S2T1P2"><a  data-title="" id="S2T1P2A" href="#"><img id="S2T1P2Img"/></a></td>
+								<td id="S2T1P3"><a  data-title="" id="S2T1P3A" href="#"><img id="S2T1P3Img"/></a></td>
+								<td id="S2T1P4"><a  data-title="" id="S2T1P4A" href="#"><img id="S2T1P4Img"/></a></td>
+								<td id="S2T1P5"><a  data-title="" id="S2T1P5A" href="#"><img id="S2T1P5Img"/></a></td>
+								<td id="S2T1P6"><a  data-title="" id="S2T1P6A" href="#"><img id="S2T1P6Img"/></a></td>
+							</tr>
+							<tr id="S1T2">
+								<td id="S2T2P1"><a  data-title="" id="S2T2P1A" href="#"><img id="S2T2P1Img"/></a></td>
+								<td id="S2T2P2"><a  data-title="" id="S2T2P2A" href="#"><img id="S2T2P2Img"/></a></td>
+								<td id="S2T2P3"><a  data-title="" id="S2T2P3A" href="#"><img id="S2T2P3Img"/></a></td>
+								<td id="S2T2P4"><a  data-title="" id="S2T2P4A" href="#"><img id="S2T2P4Img"/></a></td>
+								<td id="S2T2P5"><a  data-title="" id="S2T2P5A" href="#"><img id="S2T2P5Img"/></a></td>
+								<td id="S2T2P6"><a  data-title="" id="S2T2P6A" href="#"><img id="S2T2P6Img"/></a></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Save Three
+						<button id="Save_One_New" onclick="SavingLoading.close('Save_3')">New</button>
+						<button id="Save_One_Save" onclick="SavingLoading.set('Save_3',currentSaveFile)">Save</button>
+						<button id="Save_One_Load" onclick="SavingLoading.get('Save_3')">Load</button>
+						<table id="S3">
+							<tr id="S3T1">
+								<td id="S3T1P1"><a  data-title="" id="S3T1P1A" href="#"><img id="S3T1P1Img"/></a></td>
+								<td id="S3T1P2"><a  data-title="" id="S3T1P2A" href="#"><img id="S3T1P2Img"/></a></td>
+								<td id="S3T1P3"><a  data-title="" id="S3T1P3A" href="#"><img id="S3T1P3Img"/></a></td>
+								<td id="S3T1P4"><a  data-title="" id="S3T1P4A" href="#"><img id="S3T1P4Img"/></a></td>
+								<td id="S3T1P5"><a  data-title="" id="S3T1P5A" href="#"><img id="S3T1P5Img"/></a></td>
+								<td id="S3T1P6"><a  data-title="" id="S3T1P6A" href="#"><img id="S3T1P6Img"/></a></td>
+							</tr>
+							<tr id="S1T2">
+								<td id="S3T2P1"><a  data-title="" id="S3T2P1A" href="#"><img id="S3T2P1Img"/></a></td>
+								<td id="S3T2P2"><a  data-title="" id="S3T2P2A" href="#"><img id="S3T2P2Img"/></a></td>
+								<td id="S3T2P3"><a  data-title="" id="S3T2P3A" href="#"><img id="S3T2P3Img"/></a></td>
+								<td id="S3T2P4"><a  data-title="" id="S3T2P4A" href="#"><img id="S3T2P4Img"/></a></td>
+								<td id="S3T2P5"><a  data-title="" id="S3T2P5A" href="#"><img id="S3T2P5Img"/></a></td>
+								<td id="S3T2P6"><a  data-title="" id="S3T2P6A" href="#"><img id="S3T2P6Img"/></a></td>
+							</tr>
+						</table>
+					</td>
+					<td>
+						Save Four
+						<button id="Save_One_New" onclick="SavingLoading.close('Save_4')">New</button>
+						<button id="Save_One_Save" onclick="SavingLoading.set('Save_4',currentSaveFile)">Save</button>
+						<button id="Save_One_Load" onclick="SavingLoading.get('Save_4')">Load</button>
+						<table id="S4">
+							<tr id="S4T1">
+								<td id="S4T1P1"><a  data-title="" id="S4T1P1A" href="#"><img id="S4T1P1Img"/></a></td>
+								<td id="S4T1P2"><a  data-title="" id="S4T1P2A" href="#"><img id="S4T1P2Img"/></a></td>
+								<td id="S4T1P3"><a  data-title="" id="S4T1P3A" href="#"><img id="S4T1P3Img"/></a></td>
+								<td id="S4T1P4"><a  data-title="" id="S4T1P4A" href="#"><img id="S4T1P4Img"/></a></td>
+								<td id="S4T1P5"><a  data-title="" id="S4T1P5A" href="#"><img id="S4T1P5Img"/></a></td>
+								<td id="S4T1P6"><a  data-title="" id="S4T1P6A" href="#"><img id="S4T1P6Img"/></a></td>
+							</tr>
+							<tr id="S4T2">
+								<td id="S4T2P1"><a  data-title="" id="S4T2P1A" href="#"><img id="S4T2P1Img"/></a></td>
+								<td id="S4T2P2"><a  data-title="" id="S4T2P2A" href="#"><img id="S4T2P2Img"/></a></td>
+								<td id="S4T2P3"><a  data-title="" id="S4T2P3A" href="#"><img id="S4T2P3Img"/></a></td>
+								<td id="S4T2P4"><a  data-title="" id="S4T2P4A" href="#"><img id="S4T2P4Img"/></a></td>
+								<td id="S4T2P5"><a  data-title="" id="S4T2P5A" href="#"><img id="S4T2P5Img"/></a></td>
+								<td id="S4T2P6"><a  data-title="" id="S4T2P6A" href="#"><img id="S4T2P6Img"/></a></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Save Five
+						<button id="Save_One_New" onclick="SavingLoading.close('Save_5')">New</button>
+						<button id="Save_One_Save" onclick="SavingLoading.set('Save_5',currentSaveFile)">Save</button>
+						<button id="Save_One_Load" onclick="SavingLoading.get('Save_5')">Load</button>
+						<table id="S5">
+							<tr id="S5T1">
+								<td id="S5T1P1"><a  data-title="" id="S5T1P1A" href="#"><img id="S5T1P1Img"/></a></td>
+								<td id="S5T1P2"><a  data-title="" id="S5T1P2A" href="#"><img id="S5T1P2Img"/></a></td>
+								<td id="S5T1P3"><a  data-title="" id="S5T1P3A" href="#"><img id="S5T1P3Img"/></a></td>
+								<td id="S5T1P4"><a  data-title="" id="S5T1P4A" href="#"><img id="S5T1P4Img"/></a></td>
+								<td id="S5T1P5"><a  data-title="" id="S5T1P5A" href="#"><img id="S5T1P5Img"/></a></td>
+								<td id="S5T1P6"><a  data-title="" id="S5T1P6A" href="#"><img id="S5T1P6Img"/></a></td>
+							</tr>
+							<tr id="S5T2">
+								<td id="S5T2P1"><a  data-title="" id="S5T2P1A" href="#"><img id="S5T2P1Img"/></a></td>
+								<td id="S5T2P2"><a  data-title="" id="S5T2P2A" href="#"><img id="S5T2P2Img"/></a></td>
+								<td id="S5T2P3"><a  data-title="" id="S5T2P3A" href="#"><img id="S5T2P3Img"/></a></td>
+								<td id="S5T2P4"><a  data-title="" id="S5T2P4A" href="#"><img id="S5T2P4Img"/></a></td>
+								<td id="S5T2P5"><a  data-title="" id="S5T2P5A" href="#"><img id="S5T2P5Img"/></a></td>
+								<td id="S5T2P6"><a  data-title="" id="S5T2P6A" href="#"><img id="S5T2P6Img"/></a></td>
+							</tr>
+						</table>
+					</td>
+					<td>
+						Save Six
+						<button id="Save_One_New" onclick="SavingLoading.close('Save_6')">New</button>
+						<button id="Save_One_Save" onclick="SavingLoading.set('Save_6',currentSaveFile)">Save</button>
+						<button id="Save_One_Load" onclick="SavingLoading.get('Save_6')">Load</button>
+						<table id="S6">
+							<tr id="S6T1">
+								<td id="S6T1P1"><a  data-title="" id="S6T1P1A" href="#"><img id="S6T1P1Img"/></a></td>
+								<td id="S6T1P2"><a  data-title="" id="S6T1P2A" href="#"><img id="S6T1P2Img"/></a></td>
+								<td id="S6T1P3"><a  data-title="" id="S6T1P3A" href="#"><img id="S6T1P3Img"/></a></td>
+								<td id="S6T1P4"><a  data-title="" id="S6T1P4A" href="#"><img id="S6T1P4Img"/></a></td>
+								<td id="S6T1P5"><a  data-title="" id="S6T1P5A" href="#"><img id="S6T1P5Img"/></a></td>
+								<td id="S6T1P6"><a  data-title="" id="S6T1P6A" href="#"><img id="S6T1P6Img"/></a></td>
+							</tr>
+							<tr id="S6T2">
+								<td id="S6T2P1"><a  data-title="" id="S6T2P1A" href="#"><img id="S6T2P1Img"/></a></td>
+								<td id="S6T2P2"><a  data-title="" id="S6T2P2A" href="#"><img id="S6T2P2Img"/></a></td>
+								<td id="S6T2P3"><a  data-title="" id="S6T2P3A" href="#"><img id="S6T2P3Img"/></a></td>
+								<td id="S6T2P4"><a  data-title="" id="S6T2P4A" href="#"><img id="S6T2P4Img"/></a></td>
+								<td id="S6T2P5"><a  data-title="" id="S6T2P5A" href="#"><img id="S6T2P5Img"/></a></td>
+								<td id="S6T2P6"><a  data-title="" id="S6T2P6A" href="#"><img id="S6T2P6Img"/></a></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div id="PokemonScreen" class="screen">
+			<table>
+				<tr>
+					<td>
+						<table>
+							<tr>
+								<td id="PokemonSelect1" onclick="return updateSelectors('Team1','Pokemon1','PokemonSelect1');">1</td>
+								<td rowspan="6">Team1</td>
+							</tr>
+							<tr>
+								<td id="PokemonSelect2" onclick="return updateSelectors('Team1','Pokemon2','PokemonSelect2');">2</td>
+							</tr>
+							<tr>
+								<td id="PokemonSelect3" onclick="return updateSelectors('Team1','Pokemon3','PokemonSelect3');">3</td>
+							</tr>
+							<tr>
+								<td id="PokemonSelect4" onclick="return updateSelectors('Team1','Pokemon4','PokemonSelect4');">4</td>
+							</tr>
+							<tr>
+								<td id="PokemonSelect5" onclick="return updateSelectors('Team1','Pokemon5','PokemonSelect5');">5</td>
+							</tr>
+							<tr>
+								<td id="PokemonSelect6" onclick="return updateSelectors('Team1','Pokemon6','PokemonSelect6');">6</td>
+							</tr>
+							<tr>
+								<td id="PokemonSelect7" onclick="return updateSelectors('Team2','Pokemon1','PokemonSelect7');">7</td>
+								<td rowspan="6">Team2</td>
+							</tr>
+							<tr>
+								<td id="PokemonSelect8" onclick="return updateSelectors('Team2','Pokemon2','PokemonSelect8');">8</td>
+							</tr>
+							<tr>
+								<td id="PokemonSelect9" onclick="return updateSelectors('Team2','Pokemon3','PokemonSelect9');">9</td>
+							</tr>
+							<tr>
+								<td id="PokemonSelect10" onclick="return updateSelectors('Team2','Pokemon4','PokemonSelect10');">10</td>
+							</tr>
+							<tr>
+								<td id="PokemonSelect11" onclick="return updateSelectors('Team2','Pokemon5','PokemonSelect11');">11</td>
+							</tr>
+							<tr>
+								<td id="PokemonSelect12" onclick="return updateSelectors('Team2','Pokemon6','PokemonSelect12');">12</td>
+							</tr>
+						</table>
+					</td>
+					<td>
+						<form id="PokeForm1">
+							Species: <input type="text" list="PSpecies" name="PokeSpecies" id="SpeciesSelect">
+							<br/>
+							Level: <input type="number" name="PokeLevel" min="1" max="100">
+							<br/>
+							Item: <input type="text" list="PItem" name="PokeItem">
+							<datalist id="PSpecies"></datalist>
+							<datalist id="PItem">
+								<option selected>None</option>
+							</datalist>
+							</br>
+						`	<button type="button" onclick="return updateSpeciesLevelItem()">Submit</button>
+						</form>
+					</td>
+					<td>
+						<form id="PokeForm2">
+							Ability: <input type="text" list="PAbility" name="PokeAbility">
+							Gender: <input type="text" list="PGender" name="PokeGender">
+							Moves: <br />
+							<input type="text" list="PMove" name="PokeMove1"> <br />
+							<input type="text" list="PMove" name="PokeMove2"> <br />
+							<input type="text" list="PMove" name="PokeMove3"> <br />
+							<input type="text" list="PMove" name="PokeMove4"> <br />
+							<input type="text" list="PMove" name="PokeMove5"> <br />
+							<input type="text" list="PMove" name="PokeMove6"> <br />
+							<datalist id="PAbility"></datalist>
+							<datalist id="PGender"></datalist>
+							<datalist id="PMove"></datalist>
+							<button type="button" onclick="return updateGenderAbilityMoves()">Submit</button>
+						</form>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div id="BattleScreen" class="screen"></div>
+		<script src="Code/Base.js"></script>
+		<script src="Code/Variables.js"></script>
+		<script src="Code/Functions.js"></script>
+		<script src="Code/Damage.js"></script>
+	</body>
+</html>

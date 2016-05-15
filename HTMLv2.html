@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Shula Damage Calculator</title>
+		<link rel="stylesheet" type="text/css" href="CSS.css"/>
+		<script src="Code/Pokemon.js"></script>
+		<script src="Code/Abilities.js"></script>
+		<script src="Code/Moves.js"></script>
+		<script src="Code/Items.js"></script>
+		<script src="Code/Type.js"></script>
+	</head>
+	<body>
+		<div id="SavingScreen">
+			<table>
+				<tr>
+					<td><img src="Images/SaveMenu.png" usemap="#NewLoad1" /></td>
+					<td><img src="Images/SaveMenu.png" usemap="#NewLoad2" /></td>
+				</tr>
+				<tr>
+					<td><img src="Images/SaveMenu.png" usemap="#NewLoad3" /></td>
+					<td><img src="Images/SaveMenu.png" usemap="#NewLoad4" /></td>
+				</tr>
+				<tr>
+					<td><img src="Images/SaveMenu.png" usemap="#NewLoad5" /></td>
+					<td><img src="Images/SaveMenu.png" usemap="#NewLoad6" /></td>
+				</tr>
+			</table>
+		</div>
+		<div id="BattleScreens">
+			<canvas style="width:500px;height:300px;"></canvas>
+			<br />
+			<img id="BattleMenu" style="width:500px;height:500px" src="Images/Lower_Menu_2.png" usemap="#BattleScreenMain"/>
+			<div id="#PokemonSelect">
+				<div id="#Pokemon1"></div>
+				<div id="#Pokemon2"></div>
+				<div id="#Pokemon3"></div>
+				<div id="#Pokemon4"></div>
+				<div id="#Pokemon5"></div>
+				<div id="#Pokemon6"></div>
+			</div>
+		</div>
+		
+		
+		
+		<map name="NewLoad1" id="NewLoad1">
+			<area shape="rect" coords="15,65,36,79" onclick="SavingLoading.close('Save_1')" alt="New" />
+			<area shape="rect" coords="95,65,122,79" onclick="SavingLoading.get('Save_1')" alt="Load" />
+		</map>
+		<map name="NewLoad2" id="NewLoad2">
+			<area shape="rect" coords="15,65,36,79" onclick="SavingLoading.close('Save_2')" alt="New" />
+			<area shape="rect" coords="95,65,122,79" onclick="SavingLoading.get('Save_2')" alt="Load" />
+		</map>
+		<map name="NewLoad3" id="NewLoad3">
+			<area shape="rect" coords="15,65,36,79" onclick="SavingLoading.close('Save_3')" alt="New" />
+			<area shape="rect" coords="95,65,122,79" onclick="SavingLoading.get('Save_3')" alt="Load" />
+		</map>
+		<map name="NewLoad4" id="NewLoad4">
+			<area shape="rect" coords="15,65,36,79" onclick="SavingLoading.close('Save_4')" alt="New" />
+			<area shape="rect" coords="95,65,122,79" onclick="SavingLoading.get('Save_4')" alt="Load" />
+		</map>
+		<map name="NewLoad5" id="NewLoad5">
+			<area shape="rect" coords="15,65,36,79" onclick="SavingLoading.close('Save_5')" alt="New" />
+			<area shape="rect" coords="95,65,122,79" onclick="SavingLoading.get('Save_5')" alt="Load" />
+		</map>
+		<map name="NewLoad6" id="NewLoad6">
+			<area shape="rect" coords="15,65,36,79" onclick="SavingLoading.close('Save_6')" alt="New" />
+			<area shape="rect" coords="95,65,122,79" onclick="SavingLoading.get('Save_6')" alt="Load" />
+		</map>
+		<map name="BattleScreenMain" id="BattleScreenMain">
+			<area shape="polygon" coords="0,421,12,421,24,400,77,380,130,400,158,457,140,500,0,500" />
+			<area shape="polygon" coords="175,500,172,487,195,433,251,409,305,433,328,487,326,500" onclick="SavingLoading.set(saveLog,currentSaveFile);" />
+			<area shape="polygon" coords="363,500,344,454,370,401,423,378,478,401,489,422,500,422,500,500" onclick="teamSelect();" />
+			<area shape="circle" coords="250,259,206" />
+		</map>
+		<map name="TeamSelect" id="TeamSelect">
+			<area shape="rect" coords="0,0,249,499" onclick="pokemonSelect();"/>
+			<area shape="rect" coords="250,0,499,499" onclick="pokemonSelect();"/>
+		</map>
+		
+		
+		
+		
+		<div id="BattleScreen" class="screen"></div>
+		<script src="Code/Base.js"></script>
+		<script src="Code/Variables.js"></script>
+		<script src="Code/Functions.js"></script>
+		<script src="Code/Damage.js"></script>
+	</body>
+</html>

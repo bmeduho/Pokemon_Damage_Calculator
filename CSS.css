@@ -1,0 +1,43 @@
+body {
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+	background-color: #181818;
+}
+table {
+	border-collapse: collapse;
+	margin: 0px auto;
+}
+table, tr, td {
+	border: none;
+	padding: 0px;
+	text-align: center;
+	
+}
+td {
+	width: 50%;
+	text-align:center;
+	line-height: 0px;
+}
+
+#SavingScreen {
+	display: block;
+}
+#BattleScreens {
+	display:none;
+	text-align:center;
+}
+#PokemonSelect {
+	display:none;
+	width: 500px;
+	height: 500px;
+}
+#Pokemon1, #Pokemon2, #Pokemon3, #Pokemon4, #Pokemon5, #Pokemon6 {
+	width:200px;
+	height: 75px;
+	display: inline-block;
+	background-color:red;
+}
+img, canvas {
+	display: inline-block;
+}
